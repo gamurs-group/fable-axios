@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>0.1.0</Version>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Summary>Fable bindings for axios.</Summary>
+    <Description>Provides fable bindings for axios, a promise based HTTP client for the browser and node.js.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Grant Neale</Authors>
+    <PackageLicenseUrl>https://github.com/gamurs-group/fable-axios/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/gamurs-group/fable-axios</PackageProjectUrl>
+    <PackageTags>F#, fsharp, fable2, fable-bindings, axios</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Fable.Axios.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="*.fsproj; *.fs" PackagePath="fable\" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>
