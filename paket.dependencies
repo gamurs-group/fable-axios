@@ -3,7 +3,6 @@ content:none
 
 nuget Fable.PowerPack
 nuget Fable.Promise
-nuget FSharp.Core redirects:force
 nuget Fable.Core
 
 clitool dotnet-fable
