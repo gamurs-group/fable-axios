@@ -15,6 +15,7 @@ Stable | Prerelease
 module Example
 
 open Fable.Axios
+open Fable.Axios.Globals
 
 type ResultType = Result<string option, exn>
 
@@ -33,7 +34,7 @@ let private catchAxiosError (error : AxiosError<_, _>) : ResultType =
             handleError error
 
 let fetchWithAxios url =
-    Globals.axios.get (url)
+    axios.get (url)
     |> Promise.map parseResponse
     |> Promise.catchAxios catchAxiosError
 ```
