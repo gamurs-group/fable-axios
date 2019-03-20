@@ -1,3 +1,6 @@
+#### 0.2.0
+* Now with working axios.all bindings for up to 6 requests
+
 #### 0.1.1
 * Remove unnecessary dependency on FSharp.Core
 
