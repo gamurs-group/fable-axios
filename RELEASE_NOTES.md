@@ -1,3 +1,6 @@
+#### 0.3.0
+* Added Promise.catchBind helper for AxiosError
+
 #### 0.2.0
 * Now with working axios.all bindings for up to 6 requests
 
