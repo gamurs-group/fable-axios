@@ -197,6 +197,16 @@ module Promise =
         promise
         |> Fable.PowerPack.Promise.catch (handleAxiosError fail)
 
+    /// <summary>
+    /// JS.Promise catch function, allowing the user to provide an error handling function
+    /// that accepts a strongly typed <c>AxiosError</c>.
+    /// </summary>
+    ///
+    /// <param name="fail">Error handling function.</param>
+    /// <param name="">The promise for which to apply the error handling function.</param>
+    let catchBindAxios (fail : AxiosError<'T, 'E> -> Promise<'R>) (promise : Promise<'R>) : Promise<'R> =
+        promise
+        |> Fable.PowerPack.Promise.catchBind (handleAxiosError fail)
 
 /// Axios functions needed to be wrapped in additional F# logic
 module AxiosHelpers =
